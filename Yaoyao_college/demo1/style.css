@@ -1,41 +1,41 @@
 .content{
-            text-align: center;
-            margin:0 auto;
-            margin-top:100px;
-            height:60px;
-            width:600px;
-            position: relative;
-        }
-        span{
-            font-size:20px;
-            font-family: "Microsoft YaHei";
-            font-weight: bold;
-            margin-right: 20px;
-        }
-        input{
-            width:400px;
-            height:50px;
-            border-radius: 5px;
-            font-size: 20px;
-            font-family: "Microsoft YaHei";
-            text-indent: 10px;
-        }
-        #button{
-            width:100px;
-            height:50px;
-            margin-left:10px;
-            background: #468ADF;
-            font-size: 20px;
-            font-family: "Microsoft YaHei";
-            font-weight: bold;
-            border-radius:5px;
-            color: #fff;
-            cursor:pointer;
-        }
-        p{
-            position: absolute;
-            left:80px;
-            font-weight: bold;
-            font-family: "Microsoft YaHei";
-            color:#AAAAAA;
-        }
+    text-align: center;
+    margin:0 auto;
+    margin-top:100px;
+    height:60px;
+    width:600px;
+    position: relative;
+}
+span{
+    font-size:20px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    margin-right: 20px;
+}
+input{
+    width:400px;
+    height:50px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    text-indent: 10px;
+}
+#button{
+    width:100px;
+    height:50px;
+    margin-left:10px;
+    background: #468ADF;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    border-radius:5px;
+    color: #fff;
+    cursor:pointer;
+}
+p{
+    position: absolute;
+    left:80px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    color:#AAAAAA;
+}
