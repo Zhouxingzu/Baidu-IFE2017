@@ -95,9 +95,17 @@ function pwd_2_tip(){
 
 //验证确认密码的函数
 function verify_pwd_2(){
+    //获取输入的字符数
+    var lens = getByteLen(password.value);
     var password_1 = password.value;
     var password_2 = pwd_2.value;
-    if(password_1==password_2){
+    if(lens==0){
+        pwd_2.style.border=2+'px'+' '+'solid'+' '+'red';
+        tip3.innerHTML="密码不能为空";
+        tip3.style.color="red";
+        istrue = false;
+    }
+    else if(password_1==password_2){
         pwd_2.style.border=2+'px'+' '+'solid'+' '+'#67BB4C';
         tip3.innerHTML="密码输入一致";
         tip3.style.color="#67BB4C";
