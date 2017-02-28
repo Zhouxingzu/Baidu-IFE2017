@@ -1,3 +1,4 @@
+demo预览：https://zhouxingzu.github.io/Baidu-IFE2017/Yaoyao_college/demo2/demo2.html
 # 任务目的
 * 加强对JavaScript的掌握
 * 熟悉常用表单处理逻辑
