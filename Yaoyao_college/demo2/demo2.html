@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <div>
+            <span>名称</span>
+            <input type="text" name="text" id="text" onFocus="text_tip()" onBlur="verify_text()">
+        </div>
+        <p id="tip1"></p>
+
+        <div>
+            <span>密码</span>
+            <input type="password" name="password" id="password" onFocus="password_tip()" onBlur="verify_password()"> 
+        </div>
+        <p id="tip2"></p>
+
+        <div>
+            <span>密码确认</span>
+            <input type="password" name="password_2" id="pwd_2" onFocus="pwd_2_tip()" onBlur="verify_pwd_2()">
+        </div>
+        <p id="tip3"></p>
+
+        <div>
+            <span>邮箱</span>
+            <input type="email" name="email" id="email" onFocus="email_tip()" onBlur="verify_email()">
+        </div>
+        <p id="tip4"></p>
+
+        <div>
+            <span>手机</span>
+            <input type="tel" name="tel" id="tel" onFocus="tel_tip()" onBlur="verify_tel()">
+        </div>
+        <p id="tip5"></p>
+
+        <button id="button">提交</button>
+    </form>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
