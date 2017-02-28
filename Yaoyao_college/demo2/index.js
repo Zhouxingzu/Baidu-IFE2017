@@ -96,7 +96,7 @@ function pwd_2_tip(){
 //验证确认密码的函数
 function verify_pwd_2(){
     //获取输入的字符数
-    var lens = getByteLen(password.value);
+    var lens = getByteLen(pwd_2.value);
     var password_1 = password.value;
     var password_2 = pwd_2.value;
     if(lens==0){
