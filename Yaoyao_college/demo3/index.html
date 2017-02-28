@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="" method="get"> 
+        <label><input name="student" type="radio" value="student" id="student" onClick="check()" checked="true">在校生</label>
+        <label><input name="student" type="radio" value="notstudent" id="notstudent" onClick="check2()">非在校生</label>
+        <br>
+        <div class="list1" id="list1">
+            <span>学校</span>
+            <select class="select_city" id="select1" onChange="selectChange()">
+                <option value="请选择">请选择</option>
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="重庆">重庆</option>
+            </select>
+            <select class="select_school" id="select2">
+                <option value="请选择">请选择</option>
+            </select>
+        </div>
+        <div class="list2" id="list2">
+            <span>就业单位</span>
+            <input type="text" name="text" id="text">
+        </div>
+        
+    </form>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

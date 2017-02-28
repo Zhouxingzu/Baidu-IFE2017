@@ -1,0 +1,39 @@
+form{
+    width:500px;
+    height:500px;
+    margin:0 auto;
+    margin-top:100px;
+}
+input{
+    margin-left:100px;
+    margin-bottom:50px;
+}
+span{
+    margin:0 30px;
+}
+select{
+    width:100px;
+    height:40px;
+    margin-right:20px;
+    border-radius:5px;
+    font-size:20px;
+}
+.select_school{
+    width:200px;
+}
+#text{
+    width:350px;
+    height:40px;
+    margin:0;
+    border-radius:5px;
+    font-size:20px;
+}
+.list1,.list2{
+    width:500px;
+    height:80px;
+    line-height: 80px;
+    display: none;
+}
+.active{
+    display: block;
+}
