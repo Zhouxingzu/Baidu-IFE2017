@@ -112,7 +112,7 @@ function verify_pwd_2(){
         istrue = true;
     }
     else{
-        password.style.border=2+'px'+' '+'solid'+' '+'red';
+        pwd_2.style.border=2+'px'+' '+'solid'+' '+'red';
         tip3.innerHTML="两次密码输入不一致";
         tip3.style.color="red";
         istrue = false;
