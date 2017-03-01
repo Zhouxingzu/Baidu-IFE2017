@@ -49,10 +49,7 @@ span{
     text-align: center;
     line-height: 40px;
 }
-#text,#back,#go{
-    margin-left: 40px;
-}
-p{
+#text,#back,#go,p{
     margin-left: 40px;
 }
 #left{
