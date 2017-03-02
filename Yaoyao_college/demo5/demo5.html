@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo4</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="row">
+            <span></span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span> 
+        </div>
+        <div class="column">
+           <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span> 
+        </div>
+
+        <div class="main">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="redblock" id="redblock">
+                <div class="redblock_head"></div>
+            </div>
+        </div>
+    </div>
+    <div class="rightbox">
+        <p>在输入框中输入指令执行，或者点击下方指令按钮</p>
+        <p>GO：前进一格</p>
+        <p>TUN LEF：向左转</p>
+        <p>TUN RIG：向右转</p>
+        <p>TUN BAC：向右转</p>
+        <p>TRA LEF：向屏幕的左侧移动一格，方向不变</p>
+        <p>TRA TOP：向屏幕的上面移动一格，方向不变</p>
+        <p>TRA RIG：向屏幕的右侧移动一格，方向不变</p>
+        <p>TRA BOT：向屏幕的下面移动一格，方向不变</p>
+        <p>MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格</p>
+        <p>MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格</p>
+        <p>MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格</p>
+        <p>MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格</p>
+        <input type="text" value="" id="text">
+        <input type="submit" value="执行" id="button">
+        <br>
+        <input type="submit" value="左转" id="left" onClick="turnLeft()">
+        <input type="submit" value="右转" id="right" onClick="turnRight()">
+        <input type="submit" value="后转" id="back" onClick="turnRight(),turnRight()">
+        <input type="submit" value="前行" id="go" onClick="toGo()">
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
