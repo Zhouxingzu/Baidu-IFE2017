@@ -32,6 +32,7 @@
     background: red;
     left:240px;
     top:240px;
+    transition:all 0.5s;
 }
 .redblock_head{
     width: 40px;
