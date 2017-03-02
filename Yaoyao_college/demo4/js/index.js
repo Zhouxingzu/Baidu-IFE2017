@@ -7,96 +7,80 @@ var redblock = getElem("redblock");
 var text = getElem("text");
 var button = getElem("button");
 var left = getElem("left");
-var right = getElem("right");
+var lastTop = 280;
+//设定默认值
+redblock.style.transform = "translate(0px, 0px) rotate(0deg)";
 
 //向左旋转
 var turnLeft = function(){
-    //如果transform值存在
-    if(redblock.style.transform){
-        var baseDeg = redblock.style.transform;
-        //提取角度数字的正则表达式
-        var rel = /\-*\d+/;
-        //获取当前角度的Number类型
-        var deg = baseDeg.match(rel).join("");
-        //将选择角度加上-90度
-        redblock.style.transform = "rotate("+(parseInt(deg)-90)+"deg)"; 
-    }
-    //如果transform值不存在，添加属性
-    else{
-       redblock.style.transform = "rotate(-90deg)"; 
-    }
+    var baseDeg = redblock.style.transform;
+    var rel = /\-*\d+[a-z]{3}/g;   //匹配角度数值的正则表达式
+    var deg = baseDeg.match(rel)[0];
+    //用新的角度替换旧角度
+    var newDeg = baseDeg.replace(deg,parseInt(deg)-90+"deg");
+    redblock.style.transform = newDeg; 
 }
 
 //向右旋转
 var turnRight = function(){
-    if(redblock.style.transform){
-        var baseDeg = redblock.style.transform;
-        //提取角度数字的正则表达式
-        var rel = /\-*\d+/;
-        //获取当前角度的Number类型
-        var deg = baseDeg.match(rel).join("");
-        //将选择角度加上90度
-        redblock.style.transform = "rotate("+(parseInt(deg)+90)+"deg)"; 
-    }
-    else{
-       redblock.style.transform = "rotate(90deg)"; 
-    }
+    var baseDeg = redblock.style.transform;
+    var rel = /\-*\d+[a-z]{3}/g;   //匹配角度数值的正则表达式
+    var deg = baseDeg.match(rel)[0];
+    //用新的角度替换旧角度
+    var newDeg = baseDeg.replace(deg,parseInt(deg)+90+"deg");
+    redblock.style.transform = newDeg; 
 }
 
 //向头部方向移动一格
 var toGo = function(){
-    //获取当前的属性值
-    var top = parseInt(getComputedStyle(redblock).top);
-    var left = parseInt(getComputedStyle(redblock).left);
-    if(redblock.style.transform){
-        var baseDeg = redblock.style.transform;
-        var rel = /\-*\d+/;
-        var deg = baseDeg.match(rel).join("");
-        if(deg==0 || deg%360==0){
-            //到达顶部就停止移动
-            if(top==0){
-                redblock.style.top = top +"px";
-            }
-            else{
-                //向上移动
-                redblock.style.top = (top-40) +"px";
-            }
-        }
-        else if((deg-90)%360==0){
-            //到达右边界就停止移动
-            if(left==360){
-                redblock.style.left = left +"px";
-            }
-            else{
-               //向右移动
-                redblock.style.left = (left+40) +"px"; 
-            }
-        }
-        else if((deg-180)%360==0){
-            //到达底部边界就停止移动
-            if(top==360){
-                redblock.style.top = top +"px";
-            }
-            else{
-                //向下移动
-                redblock.style.top = (top+40) +"px";
-            }
+    var baseDeg = redblock.style.transform;
+    var rel_x = /\-*\d+\w{2}\,/g;   //匹配x轴的正则表达式:[100px,]
+    var rel_y = /\s+\-*\d+\w{2}/g;   //匹配y轴的正则表达式:[ 100px]
+    var rel = /\-*\d+[a-z]{3}/g;   //匹配角度数值的正则表达式
+    var x = baseDeg.match(rel_x)[0];
+    var y = baseDeg.match(rel_y)[0];
+    var deg = parseInt(baseDeg.match(rel)[0]);
 
+    //用新的移动距离替换旧移动距离
+    //向上移动
+    if(deg==0 || deg%360==0){
+        if(parseInt(y)<=-240){
+            //到达顶部停止移动
         }
-        else if((deg-270)%360==0){
-            //到达左边界就停止移动
-            if(left==0){
-                redblock.style.left = left +"px";
-            }
-            else{
-                //向左移动
-                redblock.style.left = (left-40) +"px"; 
-            }
-        }
+        else{
+            var newstr = baseDeg.replace(y," "+(parseInt(y)-40)+"px");
+            redblock.style.transform = newstr; 
+        }  
     }
-    else{
-       redblock.style.transform = "rotate(0deg)"; 
-       redblock.style.top = (top-40) +"px"; 
+    //向下移动
+    if((deg-180)%360==0){
+        if(parseInt(y)>=120){
+            //到达底部停止移动
+        }
+        else{
+            var newstr = baseDeg.replace(y," "+(parseInt(y)+40)+"px");
+            redblock.style.transform = newstr; 
+        }  
+    }
+    //向左移动
+    if((deg-270)%360==0){
+        if(parseInt(x)<=-240){
+            
+        }
+        else{
+            var newstr = baseDeg.replace(x,(parseInt(x)-40)+"px,");
+            redblock.style.transform = newstr; 
+        }  
+    }
+    //向右移动
+    if((deg-90)%360==0){
+        if(parseInt(x)>=120){
+            //到达右边界停止移动
+        }
+        else{
+            var newstr = baseDeg.replace(x," "+(parseInt(x)+40)+"px,");
+            redblock.style.transform = newstr; 
+        }  
     }
 }
 
