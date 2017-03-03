@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>demo6</title>
+</head>
+<body>
+	<div class="main">
+		<div class="content">
+			<div class="box">1111</div>
+			<div class="box">2222</div>
+			<div class="box">3333</div>
+			<div class="message">
+					<span>请填写信息</span>
+					<input type="text" id="text">
+					<input type="submit" id="submit">
+			</div>
+		</div>
+	</div>
+	<div class="outbox" id="outbox" onClick="cancelButton();"></div>
+	<div class="popup" id= "popup">
+		<div class="popup_head" id="popup_head">信息确定</div>
+		<p class="popup_text">确定提交输入吗？</p>
+		<div class="button cancel" onClick="cancelButton();">取消</div>
+		<div class="button confirm" onClick="cancelButton();">确定</div>	
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

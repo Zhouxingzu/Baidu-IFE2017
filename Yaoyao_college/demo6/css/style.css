@@ -1,0 +1,64 @@
+.box{
+	height: 500px;
+	background: #eee;
+	border: 2px solid #848484;
+}
+.message{
+	height: 100px;
+	background: #eee;
+	text-align: center;
+	line-height: 100px;
+}
+.outbox{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;   
+	left: 0;
+	background: #848484;
+	opacity: 0.5;
+	visibility:hidden;
+	z-index: 100;
+}
+.popup{
+	position: fixed;   
+	top: 50%;   
+	left: 50%;   
+	width: 50%; 
+	border: 1px solid black;  
+	max-width: 650px;   
+	min-width: 400px; 
+	height: 300px;
+	visibility:hidden;
+	background: #FEFEFE;   
+	z-index: 2000;    
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	   -moz-transform: translateX(-50%) translateY(-50%);
+	    -ms-transform: translateX(-50%) translateY(-50%);
+	     -o-transform: translateX(-50%) translateY(-50%);
+	        transform: translateX(-50%) translateY(-50%);
+}
+.popup_head{
+	height: 50px;
+	background: #848484;
+	line-height: 50px;
+	text-indent: 20px;
+	color: #FEFEFE;
+	cursor:move;
+}
+.popup_text{
+	text-indent: 20px;
+	margin-top: 20px;
+}
+.button{
+	float: right;
+	margin:100px 50px 0 0;
+	width: 120px;
+	height: 50px;
+	background: #848484;
+	text-align: center;
+	line-height: 50px;
+	color: #FEFEFE;
+	border: 1px solid black; 
+	cursor: pointer;
+}
