@@ -122,34 +122,26 @@ img1.onclick = function(){
 	sortFunc(1,a);
 	a = !a;
 	//点击此列排序后其他列恢复初始值
-	b = false;
-	c = false;
-	d = false;
+	b = c = d = false;
 }
 
 var img2 = document.getElementById("img2");
 img2.onclick = function(){
 	sortFunc(2,b);
 	b = !b;
-	a = false;
-	c = false;
-	d = false;
+	a = c = d = false;
 }
 
 var img3 = document.getElementById("img3");
 img3.onclick = function(){
 	sortFunc(3,c);
 	c = !c;
-	a = false;
-	b = false;
-	d = false;
+	a = b = d = false;
 }
 
 var img4 = document.getElementById("img4");
 img4.onclick = function(){
 	sortFunc(4,d);
 	d = !d;
-	a = false;
-	b = false;
-	c = false;
+	a = b = c = false;
 }
