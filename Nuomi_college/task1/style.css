@@ -19,6 +19,8 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
 }
 .caption{
 	position: absolute;
+    left:0;
+    top:0;
 	box-sizing: border-box;
 	padding:30px;
     width: 100%;
