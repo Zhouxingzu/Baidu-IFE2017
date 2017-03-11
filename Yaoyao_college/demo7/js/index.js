@@ -116,32 +116,23 @@ var sortFunc = function(m,idx){
 	}
 }
 
-var a,b,c,d = false;
 var img1 = document.getElementById("img1");
-img1.onclick = function(){
-	sortFunc(1,a);
-	a = !a;
-	//点击此列排序后其他列恢复初始值
-	b = c = d = false;
-}
-
 var img2 = document.getElementById("img2");
-img2.onclick = function(){
-	sortFunc(2,b);
-	b = !b;
-	a = c = d = false;
-}
-
 var img3 = document.getElementById("img3");
-img3.onclick = function(){
-	sortFunc(3,c);
-	c = !c;
-	a = b = d = false;
+var img4 = document.getElementById("img4");
+var isFalse = [false,false,false,false];
+//为元素设置排序属性
+function starSort(element,i){
+    element.onclick = function(){
+        sortFunc(i,isFalse[i-1]);
+        for(let j=0;j<isFalse.length; j++){
+            isFalse[j]=false;
+        }
+        isFalse[i-1] = !(isFalse[i-1]);
+    }
 }
 
-var img4 = document.getElementById("img4");
-img4.onclick = function(){
-	sortFunc(4,d);
-	d = !d;
-	a = b = c = false;
-}
+starSort(img1,1);
+starSort(img2,2);
+starSort(img3,3);
+starSort(img4,4);
