@@ -6,7 +6,7 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
 	margin: 0 auto;
 	margin-top:100px;
 	width: 40%;
-	height: 400px;
+    max-width: 600px;
 	display: flex;
 	justify-content: center;
 	align-items:center;
@@ -15,6 +15,7 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
 }
 .wrap_img{
 	height: 100%;
+    width:100%;
 	transition: all .8s;
 }
 .caption{
