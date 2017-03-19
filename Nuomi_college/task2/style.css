@@ -10,8 +10,13 @@ body,p{
 }
 .content-text{
     background: #fff;
-    padding: 20px;
     border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    max-height:0;
+    transition: max-height 0.5s;
+}
+.test_tab_content{
+    padding: 20px;
 }
 .test_radio{
     position: absolute;
@@ -26,9 +31,6 @@ body,p{
 .test_label:hover{
     text-decoration: underline;
 }
-.content-text{
-    display: none;
-}
-.test_radio:checked ~ .content-text {
-    display: block;
+.test_radio:checked ~ .content-text{
+    max-height: 100px;
 }
