@@ -1,39 +1,39 @@
 body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
-	margin:0;
-	padding: 0;
+    margin:0;
+    padding: 0;
 }
 .wrap{
-	margin: 0 auto;
-	margin-top:100px;
-	width: 40%;
+    margin: 0 auto;
+    margin-top:100px;
+    width: 40%;
     max-width: 600px;
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	position: relative;
-	overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    overflow:hidden;
 }
 .wrap_img{
-	height: 100%;
+    height: 100%;
     width:100%;
-	transition: all .8s;
+    transition: all .8s;
 }
 .caption{
-	position: absolute;
+    position: absolute;
     left:0;
     top:0;
-	box-sizing: border-box;
-	padding:30px;
+    box-sizing: border-box;
+    padding:30px;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
 .content{
-	width: 100%;
-	height: 100%;
-	position:relative; 
-	display: -webkit-flex;        
-            display: flex;   
+    width: 100%;
+    height: 100%;
+    position:relative; 
+    display: -webkit-flex;        
+    display: flex;   
     -webkit-align-items: center;   
             align-items: center;  
     -webkit-justify-content: center;   
@@ -42,9 +42,9 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
 
 }
 .content::before{
-	content: '';
-	position: absolute;
-	left: 0;
+    content: '';
+    position: absolute;
+    left: 0;
     top: 50%;
     width: 100%;
     height: 0;
@@ -55,9 +55,9 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
     transition: all .8s;
 }
 .content::after{
-	content: '';
-	position: absolute;
-	left: 50%;
+    content: '';
+    position: absolute;
+    left: 50%;
     top: 0;
     width: 0;
     height: 100%;
@@ -68,12 +68,12 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
     transition: all .8s;
 }
 .content a,h1{
-	color:#3498db;
-	z-index: 10;
-	transform: translate(0,20px);
-	opacity: 0;
-	transition: all .8s;
-	margin-bottom: 10px;
+    color:#3498db;
+    z-index: 10;
+    transform: translate(0,20px);
+    opacity: 0;
+    transition: all .8s;
+    margin-bottom: 10px;
 }
 .wrap:hover .wrap_img{
 	-webkit-filter:blur(2px);
@@ -96,8 +96,8 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
 	opacity: 1;
 }
 .streamer{
-	/*设置渐变背景色*/
-	background-image: -webkit-linear-gradient(left,#3498db,#f47920 10%,#d71345 20%,#f7acbc 30%,#ffd400 40%,#3498db 50%,#f47920 60%,#d71345 70%,#f7acbc 80%,#ffd400 90%,#3498db);
+    /*设置渐变背景色*/
+    background-image: -webkit-linear-gradient(left,#3498db,#f47920 10%,#d71345 20%,#f7acbc 30%,#ffd400 40%,#3498db 50%,#f47920 60%,#d71345 70%,#f7acbc 80%,#ffd400 90%,#3498db);
     /*裁剪背景图*/
     -webkit-background-clip: text;
     /*将文字设为透明，显示背景色*/
@@ -110,7 +110,7 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
             animation: changeColor 5s infinite linear;
 }
 @keyframes changeColor{
-	0%   {
+    0%   {
         background-position: 0 0;
     }
     100% {
@@ -118,13 +118,13 @@ body, button, code, dd, div, dl, dt, fieldset, figcaption, figure, form, h1{
     }
 }
 .breath{
-	-webkit-animation: breathe 5s infinite linear;
+    -webkit-animation: breathe 5s infinite linear;
        -moz-animation: breathe 5s infinite linear;
          -o-animation: breathe 5s infinite linear;
             animation: breathe 5s infinite linear;
 }
 @keyframes breathe{
-	0%  {
+    0%  {
         color:blue;
     }
     25% {
